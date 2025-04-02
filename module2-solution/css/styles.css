@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "DejaVu Sans", sans-serif;
+}
+
+h1 {
+    font-size: 28px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 10px 0;
+}
+
+.container {
+    width: 100%;
+    padding: 15px;
+}
+
+.box {
+    border: 1px solid black;
+    background-color: #a6a6a6;
+    margin: 10px;
+    padding: 40px 15px 15px 15px;
+    position: relative;
+    float: left;
+}
+
+.section-title {
+  font-size: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px 30px;
+    border: 1px solid black;
+    border-top: 0;
+    border-right: 0;
+}
+
+#chicken .section-title {
+    background-color: #ffb6c1;
+}
+
+#beef .section-title {
+    background-color: #ff6347;
+}
+
+#sushi .section-title {
+    background-color: #90ee90;
+}
+
+/* Desktop view */
+@media (min-width: 992px) {
+    .box {
+        width: calc(33.33% - 20px);
+    }
+}
+
+/* Tablet view */
+@media (min-width: 768px) and (max-width: 991px) {
+    .box {
+        width: calc(50% - 20px);
+    }
+    .box:nth-child(3) {
+        width: calc(100% - 20px);
+        clear: both;
+    }
+}
+
+/* Mobile view */
+@media (max-width: 767px) {
+    .box {
+        width: calc(100% - 20px);
+        float: none;
+    }
+}
+
+/* Clearfix */
+.container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
