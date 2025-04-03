@@ -1,0 +1,57 @@
+/* Basic styles */
+body {
+  font-family: "DejaVu Sans", sans-serif;
+}
+
+/* Navbar styling */
+.navbar {
+  border-radius: 0;
+  border: 0;
+  margin-bottom: 20px;
+}
+
+/* Content box styling */
+.content-box {
+  background-color: #c1c1c1;
+  padding: 20px;
+  margin-bottom: 20px;
+  height: 1000px; /* Make section tall enough to require scrolling */
+  overflow: auto;
+}
+
+/* Mobile menu styling */
+#collapsable-nav {
+  background-color: #f8f8f8;
+  width: 100%;
+}
+
+#collapsable-nav li {
+  border-bottom: 1px solid #e7e7e7;
+  text-align: center;
+}
+
+#collapsable-nav li:last-child {
+  border-bottom: none;
+}
+
+/* Spacing */
+h1 {
+  margin-bottom: 30px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+/* Make sure dropdown takes full width on mobile */
+@media (max-width: 767px) {
+  .navbar-collapse {
+    width: 100%;
+  }
+
+  /* Ensure menu items are visible only on xs screens */
+  .navbar-nav {
+    margin: 0;
+    width: 100%;
+  }
+}
